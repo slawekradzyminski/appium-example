@@ -25,6 +25,8 @@ public class ExampleFluentTest extends FluentTest {
 
     private static final Logger log = LoggerFactory.getLogger(ExampleFluentTest.class);
 
+    protected AppiumDriver<?> appiumDriver;
+
     @Autowired
     private Device device;
 
@@ -39,8 +41,8 @@ public class ExampleFluentTest extends FluentTest {
 
     private WebDriver runTestOnAppiumServer() {
         try {
-            return new AppiumDriver<>(
-                    new URL(appiumServerUrl), getCapabilities());
+            appiumDriver = new AppiumDriver<>(new URL(appiumServerUrl), getCapabilities());
+            return appiumDriver;
         } catch (MalformedURLException e) {
             throw new ConfigException("Invalid hub location: " + appiumServerUrl, e);
         }

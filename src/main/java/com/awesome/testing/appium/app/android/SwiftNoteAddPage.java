@@ -1,5 +1,7 @@
 package com.awesome.testing.appium.app.android;
 
+import com.awesome.testing.appium.util.adb.AdbHelper;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.domain.FluentWebElement;
@@ -22,6 +24,18 @@ public class SwiftNoteAddPage extends FluentPage {
         await().until(titleElement).displayed();
         titleElement.write(noteTitle);
         noteElement.write(noteBody);
+        backButton.click();
+        await().until(saveNote).clickable();
+        saveNote.click();
+        return newInstance(SwiftNoteHomePage.class);
+    }
+
+    public SwiftNoteHomePage addNoteUsingAdb(String noteTitle, String noteBody, AppiumDriver<?> appiumDriver) {
+        await().until(titleElement).displayed();
+        titleElement.click();
+        AdbHelper.typeText(noteTitle, appiumDriver);
+        noteElement.click();
+        AdbHelper.typeText(noteBody, appiumDriver);
         backButton.click();
         await().until(saveNote).clickable();
         saveNote.click();
