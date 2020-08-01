@@ -2,8 +2,14 @@ package com.awesome.testing.appium.ios;
 
 import com.awesome.testing.appium.ExampleFluentTest;
 import com.awesome.testing.appium.app.ios.HomePage;
+import org.apache.commons.io.FileUtils;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Test;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.File;
+import java.io.IOException;
 
 public class IosUITestDemo extends ExampleFluentTest {
 
@@ -27,4 +33,9 @@ public class IosUITestDemo extends ExampleFluentTest {
                 .verifyIfIsLoaded();
     }
 
+    @Test
+    public void screenshotTest() throws IOException {
+        File file  = ((TakesScreenshot)appiumDriver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(file, new File("Screenshot.jpg"));
+    }
 }
