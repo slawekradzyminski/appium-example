@@ -1,4 +1,4 @@
-package appium.app.android;
+package com.awesome.testing.appium.app.android;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.fluentlenium.core.FluentPage;

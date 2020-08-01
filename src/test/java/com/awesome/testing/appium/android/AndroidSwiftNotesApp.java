@@ -1,7 +1,7 @@
-package appium.android;
+package com.awesome.testing.appium.android;
 
-import appium.ExampleFluentTest;
-import appium.app.android.SwiftNoteHomePage;
+import com.awesome.testing.appium.ExampleFluentTest;
+import com.awesome.testing.appium.app.android.SwiftNoteHomePage;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Test;
 

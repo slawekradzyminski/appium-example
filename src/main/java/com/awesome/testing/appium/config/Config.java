@@ -1,12 +1,12 @@
-package appium.config;
+package com.awesome.testing.appium.config;
 
-import appium.device.Android;
-import appium.device.Iphone;
+import com.awesome.testing.appium.device.Android;
+import com.awesome.testing.appium.device.Iphone;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@ComponentScan(value = {"appium"})
+@ComponentScan(value = {"com.awesome.testing.appium"})
 @PropertySources(@PropertySource("config.properties"))
 public class Config {
 

@@ -1,7 +1,7 @@
-package appium.ios;
+package com.awesome.testing.appium.ios;
 
-import appium.ExampleFluentTest;
-import appium.app.ios.HomePage;
+import com.awesome.testing.appium.ExampleFluentTest;
+import com.awesome.testing.appium.app.ios.HomePage;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Test;
 

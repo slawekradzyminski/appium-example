@@ -1,8 +1,8 @@
-package appium;
+package com.awesome.testing.appium;
 
-import appium.config.Config;
-import appium.config.ConfigException;
-import appium.device.Device;
+import com.awesome.testing.appium.config.Config;
+import com.awesome.testing.appium.config.ConfigException;
+import com.awesome.testing.appium.device.Device;
 import io.appium.java_client.AppiumDriver;
 import org.fluentlenium.adapter.junit.FluentTest;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package appium.device;
+package com.awesome.testing.appium.device;
 
 import org.openqa.selenium.Capabilities;
 

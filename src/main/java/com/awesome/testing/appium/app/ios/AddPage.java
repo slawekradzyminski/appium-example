@@ -1,4 +1,4 @@
-package appium.app.ios;
+package com.awesome.testing.appium.app.ios;
 
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.fluentlenium.core.FluentPage;

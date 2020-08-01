@@ -1,4 +1,4 @@
-package appium.config;
+package com.awesome.testing.appium.config;
 
 public class ConfigException extends RuntimeException {
 
